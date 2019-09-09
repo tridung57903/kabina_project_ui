@@ -1,0 +1,108 @@
+$theme-color: #000000;
+$theme-background-color: #FFFFFF;
+$text-color:#5c6b7e;
+$theme-color-disable: #a5adb8;
+$theme-light-color-disable: #9a9a9a;
+$theme-light-color-disable-2: #e6e6e6;
+$theme-highlight-1: #a8d3f0;
+$theme-highlight-2: #000000;
+$error-color: #bb3800;
+$hover-color: lighten($theme-color, 81.57);
+$light-hover-color: #edf3f7;
+$profile-color: $theme-color;
+$list-header-color:	#a2b8ec;
+$list-sub-header-color:#e1e7f9;
+
+
+/*common colors*/
+
+$gray-color: #555555;
+$gray-color-1: #90949c;
+$light-gray-color: #CCCCCC;
+$white-color: #ffffff;
+$black-color: #000000;
+$red-color: #fa3e3e;
+$black-color-2: #555555;
+$very-light-gray-color: #EEEEEE;
+$yellow-color: #FFFF00;
+$active-border-color: #32bea6;
+$header-background-color: #eff6fb;
+$light-gray-border-color:rgba(151, 151, 151, 0.2);
+$flaticon-interface-color: #32C770;
+$horizontal-row-color: #C8C8C8;
+
+/*----- FONT-----*/
+
+/*Font*/
+
+$font-size-small-1: 10px;
+$font-size-small-2: 12px;
+$font-size-medium: 13px;
+$font-size-large-1: 20px;
+$font-size-large-2: 50px;
+$font-size-large-3: 100px;
+
+/*Font Family*/
+//'Roboto', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+//' Segoe UI,SegoeUI'
+$app-font-family: 'LatoRegular', sans-serif;
+$app-dashboard-font-family:'LatoRegular', sans-serif;
+$error-font-family: 'LatoRegular', sans-serif;
+$glyphicons-font: 'Glyphicons Halflings';
+$mydatepicker: 'mydatepicker';
+/*----- ICONS-----*/
+
+$icon-size:18px;
+$icon-font-size: 8px;
+$close-icon-color: #aaaaaa;
+
+/*----- COMPONENTS-----*/
+
+$link-color: $theme-color;
+$label-color:#5c6b7e;
+$border-color:#dee1e7;
+$border-top-color: #e5e6e9;
+$border-sides-color:#dfe0e4;
+$border-bottom-color: #d0d1d5;
+$text-input-color: $black-color;
+$border-color-1: #DDDDDD;
+$border-focus-color: #66afe9;
+$un-active-color: #565656;
+$disable-color: #eee;
+$active-color: #60b515;
+$border-color-2: #ccc;
+$border-color-3: #dff0d8;
+$status-processing: #ffff00;
+$status-notworking: #bd362f;
+$status-operational: #14983c;
+$success-color: #44cead;
+
+$font-thin: 100;
+$font-light: 300;
+$font-normal: 400;
+$font-bold: 600;
+$font-bolder: 700;
+$font-ultraBold: 900;
+
+//Media Queries Responsive
+$phone: '(max-width: 480px)';
+$tablet-portrait: '(max-width: 768px)';
+$tablet-landscape: '(min-width: 769px) and (max-width: 979px)';
+$large-desktop: '(min-width: 1200px)';
+
+
+//Vertical Nav
+$vertical-nav-link-color: $un-active-color;
+
+//Nav bar
+$nav-bar-border-color: $border-color-2;
+
+/*----- SPACE variable-----*/
+$xxs : 5px;
+$xs : 10px;
+$small : 25px;
+$medium : 50px;
+$large : 75px;
+$xlarge : 100px;
+$xxlarge: 150px;

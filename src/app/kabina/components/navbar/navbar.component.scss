@@ -1,0 +1,182 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.app-navbar {
+    @include font-size($font-size-large-1 - 3px);
+    background-color: $white-color;
+    .navbar-brand {
+        @include padding (7px, 5px, 7px, 5px);
+        height: 55px;
+        img {
+            width: 160px;
+            display: inline;
+        }
+        .divider-navbar {
+            display: inline-block;
+            width: 2px;
+            height: 24px;
+            border-left: 2px solid $black-color;
+            border-radius: 1px;
+            @include pseudo(relative, 8px, false, false, false, false);
+            @include space (margin, right, $xxs + 3px);
+        }
+        .navbar-title {
+            display: inline;
+            @include font-size($font-size-medium + 4px, $black-color);
+            font-family: $app-font-family;
+            vertical-align: middle;
+            @include space (padding, all, 5px);
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: none;
+            }
+        }
+    }
+    @media screen and (max-width: 320px) {
+        .navbar-brand {
+            img {
+                width: 140px;
+            }
+            .navbar-title {
+                @include font-size($font-size-medium + 1px);
+            }
+            .divider-navbar {
+                @include space (margin, right, 0px);
+            }
+        }
+    }
+    .profile-image {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .navbar-right {
+        @include space (margin, right, 0px);
+        @include space (margin, top, $xxs - 2px);
+        .dropdown-user {
+            a {
+                img {
+                    @include space (padding, all, 8px);
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .dropdown-menu {
+                left: -48px;
+                .menu-logo {
+                    img {
+                        @include space (padding, all, 0px);
+                        @include space (margin, top, -4px);
+                    }
+                }
+            }
+            .profile-section {
+                span {
+                    display: inline-block;
+                    @include font-size($font-size-medium + 1px, false, false, 3);
+                    @include space (padding, left, 4px);
+                }
+            }
+        }
+        .dropdown-menu {
+            width: 100%;
+            box-shadow: 0 0 15px rgba(0, 24, 55, 0.25);
+            a {
+                @include space (padding, all, 5px);
+                @include font-size($font-size-medium + 1px);
+            }
+        }
+        .app-menu-items {
+            .dropdown-menu {
+                right: 0px;
+                left: -176px;
+            }
+        }
+    }
+    .profile-section {
+        padding-top: 6px;
+        .dropdown-menu {
+            a {
+                &:hover {
+                    background-color: $hover-color;
+                }
+            }
+            &:before {
+                @include pseudo(absolute, -8px, false, 71px, false, false);
+                display: inline-block;
+                border-right: 12px solid transparent;
+                border-bottom: 12px solid $white-color;
+                border-left: 12px solid transparent;
+                content: '';
+            }
+        }
+    }
+    .nav .open>a,
+    .nav .open>a:focus,
+    .nav .open>a:hover {
+        background-color: $white-color;
+    }
+    .apps {
+        background: $white-color;
+        @include space(margin, all, 0px);
+        min-height: 100px;
+        @include space(padding, all, 15px);
+        text-align: left;
+        white-space: normal;
+        width: 347px !important;
+        &:before,
+        &:after {
+            @include pseudo(absolute, -12px, auto, 182px, false, false);
+            display: inline-block;
+            border-right: 12px solid transparent;
+            border-bottom: 12px solid $light-gray-color;
+            border-left: 12px solid transparent;
+            content: '';
+        }
+        &:after {
+            top: -11px;
+            border-bottom-color: $white-color;
+        }
+        .apps-section{
+            @include padding (10px, 0, 10px, 0);
+            border-bottom: 1px solid $very-light-gray-color;
+            &:last-child {
+                border: none !important;
+            }
+            .app-block {
+                display: inline-block;
+                vertical-align: top;
+                z-index: 999;
+                height: 98px;
+                width: 105px;
+               
+                a {
+                    @include space (padding, all, 1px);
+                    color: black;
+                    text-align: center;
+                    display: block;
+                    width: 93px;
+                    border: 1px solid transparent;
+                    img {
+                        @include padding (10px, 0, 10px, 0);
+                    }
+                    span {
+                        display: block !important;
+                    }
+                    &:hover {
+                        span {
+                            white-space: normal;
+                            max-height: none;
+                        }
+                        background: none !important;
+                        color: inherit !important;
+                        border: 1px solid $nav-bar-border-color;
+                    }
+                }
+            }
+        }
+    }
+}

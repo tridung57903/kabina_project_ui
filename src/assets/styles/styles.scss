@@ -1,0 +1,140 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'abstracts/variables';
+@import  'abstracts/mixins';
+
+.pb-nav-content {
+    width: 100%;
+    @include margin(0, auto, 12px, auto);
+    height: 100%;
+    background-color: $white-color;
+    @include padding (0, 0px, 20px, 0px);
+    overflow-y: auto;
+    .item {
+        @include padding (10px, 15px, 10px, 15px);
+        cursor: pointer;
+        a {
+            color: $black-color;
+        }
+        &:hover,
+        &:focus {
+            background: $hover-color;
+            color: $black-color;
+            @include transition(all 0.25s ease-out);
+            a {
+                color: $black-color;
+            }
+        } 
+        &.active{
+            background: $theme-color;
+            color: $white-color !important;
+            @include transition(all 0.25s ease-out);
+            a, .glyphicon {
+                color: $white-color !important;
+            }
+        }
+        a {
+            font-weight: bold;
+            &:hover {
+                text-decoration: none !important;
+            }
+            i {
+                @include space (margin, right, $xs);
+            }
+        }
+    }
+    .sub-item {
+        @extend .item;
+        @include space (padding, left, 40px);
+        a {
+            font-weight: normal;
+        }
+    }
+}
+
+//BASIC TABLE STYLING
+.table-list-base{
+    width: 100%;
+    table-layout: fixed;
+    @include space (margin, bottom, 0px);
+    margin-bottom: 0px;
+    tr td {
+        border-bottom: 1px solid $border-color-1;
+        border-top: 0;
+        vertical-align: middle;
+        @include space (padding, all, $xs);
+        padding: 10px;
+    }
+    thead tr {
+        th {
+            
+        @include space (padding, all, $xs);
+        padding: 10px;
+            border-bottom: 1px solid $border-color-1;
+            cursor: pointer;
+            i {
+                @include space (margin, left, $xs);
+                margin-left: 10px;
+            }
+            &.sort {
+                i {
+                    color: $theme-color;
+                }
+            }
+        }
+        &.history-header-row {
+            th {
+                border-bottom: none;
+            }
+        }
+    }
+    tbody {
+        tr:nth-child(even) {background-color: $very-light-gray-color;}
+        tr:hover {
+            background-color: $hover-color;
+        }
+        tr:last-child {	
+            td {	
+                border-bottom: none !important;	
+            }	
+        }
+    }
+}
+.table-list-flat{
+  @extend .table-list-base;
+  tr td {
+      @include font-size($font-size-small-2 + 1, $black-color, $font-normal);
+  }
+  thead tr {
+      @include font-size($font-size-small-2 + 1, $black-color, $font-bold);
+  }
+}
+
+.glyphicon {
+    position: absolute;
+    pointer-events: none;
+    color: $theme-color;
+  }
+
+.padding-none {
+    @include space (padding, left, 0 !important);
+    @include space (padding, right, 0 !important);
+}
+
+.margin-bottom-none {
+    @include space (margin, top, 0 !important);
+}
+
+.padding-left-none {
+    @include space (padding, left, 0 !important);
+}
+
+.padding-right-none {
+    @include space (padding, right, 0 !important);
+}
+
+.ngx-pagination{
+    float: right;
+    .current{
+        background: $theme-color !important;
+    }
+}

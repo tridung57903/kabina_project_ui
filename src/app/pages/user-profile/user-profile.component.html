@@ -1,0 +1,96 @@
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 50px; background-image: url(assets/images/common/banner.png); background-size: cover; background-position: center top;">
+  <!-- Mask -->
+  <!-- <span class="mask bg-gradient-danger opacity-8"></span> -->
+  <!-- Header container -->
+  <!-- <div class="container-fluid d-flex align-items-center">
+    <div class="row">
+      <div class="col-lg-7 col-md-10">
+        <h1 class="display-2 text-white">Hello Jesse</h1>
+        <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
+        <a href="#!" class="btn btn-info">Edit profile</a>
+      </div>
+    </div>
+  </div> -->
+</div>
+<div class="container-fluid mt--7">
+   <!-- Table -->
+   <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <h3 class="mb-0">User list</h3>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead *ngIf="userList" class="thead-light">
+              <tr>
+                <th scope="col">User Id</th>
+                <th scope="col">Email</th>
+                <th scope="col">Name</th>
+                <th scope="col">Short Name</th>
+                <th scope="col">Role</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody *ngIf="userList">
+              <tr *ngFor="let user of userList ">
+                <th scope="row">
+                    {{user?.id}}
+                </th>
+                <td>
+                    {{user?.email}}
+                </td>
+                <td>
+                    {{user?.fullName}}
+                </td>
+                <td>
+                    {{user?.shortName}}
+                </td>
+                <td>
+                    {{user?.role}}
+                </td>
+                <td class="text-right">
+                  <div ngbDropdown placement="bottom-right">
+                    <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                    <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                      <a class="dropdown-item" href="javascript:void(0)">Edit</a>
+                      <a class="dropdown-item" href="javascript:void(0)">Delete</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer py-4">
+          <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+              <li class="page-item disabled">
+                <a class="page-link" href="javascript:void(0)" tabindex="-1">
+                  <i class="fas fa-angle-left"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="javascript:void(0)">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">2 <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">
+                  <i class="fas fa-angle-right"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

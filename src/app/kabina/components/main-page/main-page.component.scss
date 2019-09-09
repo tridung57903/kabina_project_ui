@@ -1,0 +1,17 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.main-page-section{
+    margin-top: 57px;
+    .manage-section{
+        margin-top: 10px;
+    }
+    .background {
+        background-image: url("../../../../assets/images/common/banner.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+

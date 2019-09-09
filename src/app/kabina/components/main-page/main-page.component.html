@@ -1,0 +1,26 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-none main-page-section">
+  <div class="abc">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 background">
+      <img [attr.width]="width ? width : '100%'" [src]="'assets/images/common/banner.png'" [alt]="'Not found'">
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 manage-section">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 padding-left-none">
+        <app-vertical-nav>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item" [routerLink]="['/kabina', 'users']"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a>
+              <i class="glyphicon glyphicon-user"></i>User List</a>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item" [routerLink]="['/securities', 'rules']"
+            routerLinkActive="active">
+            <a>
+              <i class="glyphicon glyphicon-filter"></i>Rules</a>
+          </div>
+        </app-vertical-nav>
+      </div>
+      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 padding-none">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
